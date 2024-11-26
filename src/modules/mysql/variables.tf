@@ -19,3 +19,9 @@ variable administrator_pw {
   nullable    = false
   description = "Administrator Password"
 }
+
+variable "mysql_db_names" {
+  type        = list(string)
+  description = "The names of the MySQL Databases."
+  default     = ["SampleDB"]
+}
