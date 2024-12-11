@@ -41,3 +41,15 @@ variable "location" {
   default = "West Europe"
 }
 
+variable "location_short" {
+    type        = string
+  description = "Where the resources are located"
+  default = "westeu"
+}
+
+variable "subscription_id" {
+    type        = string
+  description = "Sub"
+}
+
+

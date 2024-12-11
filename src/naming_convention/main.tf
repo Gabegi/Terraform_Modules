@@ -7,5 +7,6 @@ output "workloads" {
   value = {
     mysql_server    = "mysqlfs-${local.name_with_env}"
     mysql_db    = "mysql-db-${local.name_with_env}"
+    rg    = "rg-${local.name_with_env}"
   }
 }

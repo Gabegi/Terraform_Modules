@@ -45,7 +45,7 @@ module "appservice" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = module.naming_convention.for_modules.resource_group
+  name     = module.naming_convention.workloads.rg
   location = var.location
 }
 

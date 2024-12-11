@@ -47,5 +47,5 @@ variable "app_names" {
 
 variable "mysql_server_id" {
   description = "Id of MySQL server"
-  type        = list(string)
+  type        = string
 }
