@@ -31,3 +31,18 @@ variable environment {
   nullable    = false
   description = "Environment (e.g. test, prd)"
 }
+
+variable "application_identification" {
+  description = "Application identification (e.g., app name or code)"
+  type        = string
+}
+
+variable "application_subgroup" {
+  description = "Application subgroup"
+  type        = string
+}
+
+variable "business_unit" {
+  description = "Business unit"
+  type        = string
+}
