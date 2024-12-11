@@ -1,5 +1,5 @@
 module "naming_convention" {
-  source                     = "../naming-convention"
+  source                     = "../naming_convention"
   application_identification = var.application_identification
   application_subgroup       = var.application_subgroup
   business_unit              = var.business_unit
@@ -13,10 +13,13 @@ module "mysql" {
   administrator_pw = var.administrator_pw
   environment = var.environment
   location = var.location
+  business_unit              = var.business_unit
+  application_subgroup       = var.application_subgroup
+  application_identification = var.application_identification
 }
 
 module "appservice" {
-  source = "./modules/app"
+  source = "../modules/app"
 
   # Naming convention variables
   application_identification = var.application_identification
