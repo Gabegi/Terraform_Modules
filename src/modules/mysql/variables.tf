@@ -25,3 +25,9 @@ variable "mysql_db_names" {
   description = "The names of the MySQL Databases."
   default     = ["SampleDB"]
 }
+
+variable environment {
+  type        = string
+  nullable    = false
+  description = "Environment (e.g. test, prd)"
+}

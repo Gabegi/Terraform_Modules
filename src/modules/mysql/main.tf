@@ -8,7 +8,7 @@ module "naming_convention" {
 }
 
 resource "azurerm_mysql_flexible_server" "mysql_server" {
-  name                         = "${module.naming_convention.workloads.mysql_server}-${var.purpose}-${var.environment}"
+  name                         = "${module.naming_convention.workloads.mysql_server}-${var.environment}"
   location                     = var.location
   resource_group_name          = var.rg_name
   administrator_login          = var.administrator_login
