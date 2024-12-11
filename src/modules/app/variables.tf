@@ -44,3 +44,8 @@ variable "app_names" {
   description = "List of App Service names to create"
   type        = list(string)
 }
+
+variable "mysql_server_id" {
+  description = "Id of MySQL server"
+  type        = list(string)
+}

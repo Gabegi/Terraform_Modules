@@ -16,7 +16,7 @@ module "mysql" {
 }
 
 module "appservice" {
-  source = "./modules/appservice"
+  source = "./modules/app"
 
   # Naming convention variables
   application_identification = var.application_identification
@@ -26,7 +26,7 @@ module "appservice" {
   location_short             = var.location_short
 
   # Resource group and App Service specifics
-  rg_name = var.rg_name
+  rg_name = azurerm_resource_group.rg.name
 
   # SKU for the App Service Plan
   app_service_plan_sku = {
@@ -36,6 +36,9 @@ module "appservice" {
 
   # List of App Services to create
   app_names = ["service1", "service2"]
+
+  # MySQL Server ID
+  mysql_server_id = module.mysql.server_id
 }
 
 resource "azurerm_resource_group" "rg" {
