@@ -10,7 +10,7 @@ module "naming_convention" {
 # App Service Plan
 resource "azurerm_app_service_plan" "app_service_plan" {
   name                = "${module.naming_convention.workloads.app_service_plan}-${var.environment}"
-  location            = var.location_short
+  location            = var.location
   resource_group_name = var.rg_name
 
   sku {
@@ -23,7 +23,7 @@ resource "azurerm_app_service_plan" "app_service_plan" {
 resource "azurerm_app_service" "app_service" {
   for_each            = toset(var.app_names)
   name                = "${module.naming_convention.workloads.app_service}-${each.value}-${var.environment}"
-  location            = var.location_short
+  location            = var.location
   resource_group_name = var.rg_name
   app_service_plan_id = azurerm_app_service_plan.app_service_plan.id
 

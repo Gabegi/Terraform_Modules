@@ -18,8 +18,8 @@ variable "environment" {
   type        = string
 }
 
-variable "location_short" {
-  description = "Short location code (e.g., eastus -> eus)"
+variable "location" {
+  description = "location"
   type        = string
 }
 

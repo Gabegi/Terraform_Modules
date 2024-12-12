@@ -26,7 +26,7 @@ module "appservice" {
   application_subgroup       = var.application_subgroup
   business_unit              = var.business_unit
   environment                = var.environment
-  location_short             = var.location_short
+  location          = var.location
 
   # Resource group and App Service specifics
   rg_name = azurerm_resource_group.rg.name

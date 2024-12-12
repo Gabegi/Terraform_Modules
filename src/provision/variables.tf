@@ -13,7 +13,7 @@ variable "application_subgroup" {
 variable "business_unit" {
     type        = string
     description = "The business unit"
-    default = "important_department"
+    default = "bu"
 }
 
 variable "environment" {
@@ -31,7 +31,7 @@ variable "administrator_login" {
 variable "administrator_pw" {
   type        = string
   description = "The admin mysql password"
-  default = "notsafe"
+  default = "Greaterthan8"
 }
 
 
@@ -39,12 +39,6 @@ variable "location" {
   type        = string
   description = "Where the resources are located"
   default = "West Europe"
-}
-
-variable "location_short" {
-    type        = string
-  description = "Where the resources are located"
-  default = "westeu"
 }
 
 variable "subscription_id" {

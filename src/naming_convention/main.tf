@@ -8,5 +8,7 @@ output "workloads" {
     mysql_server    = "mysqlfs-${local.name_with_env}"
     mysql_db    = "mysql-db-${local.name_with_env}"
     rg    = "rg-${local.name_with_env}"
+    app_service_plan = "asp-${local.name_with_env}"
+    app_service = "as-${local.name_with_env}"
   }
 }
