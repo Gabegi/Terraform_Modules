@@ -6,6 +6,10 @@ variable "rg_name" {
   type        = string
   description = "Resource group name for deployment"
 }
+variable "department" {
+  type        = string
+  description = "Name of the department in the company"
+}
 
 variable administrator_login {
   type        = string

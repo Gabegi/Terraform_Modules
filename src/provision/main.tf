@@ -16,7 +16,22 @@ module "mysql" {
   business_unit              = var.business_unit
   application_subgroup       = var.application_subgroup
   application_identification = var.application_identification
+  department = var.department
 }
+
+module "mysql_2" {
+  source = "../modules/mysql"
+  rg_name                  = azurerm_resource_group.rg.name
+  administrator_login      = var.administrator_login_2
+  administrator_pw         = var.administrator_pw_2
+  environment              = var.environment
+  location                 = var.location
+  business_unit            = var.business_unit
+  application_subgroup     = var.application_subgroup
+  application_identification = var.application_identification
+  department = var.department_2
+}
+
 
 module "appservice" {
   source = "../modules/app"

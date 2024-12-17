@@ -28,10 +28,34 @@ variable "administrator_login" {
   default = "Bob"
 }
 
+variable "administrator_login_2" {
+  type        = string
+  description = "The mysql login name"
+  default = "Bob2"
+}
+
+variable "department" {
+  type        = string
+  description = "Name of the department in the company"
+  default = "it"
+}
+
+variable "department_2" {
+  type        = string
+  description = "Name of the department in the company"
+  default = "hr"
+}
+
 variable "administrator_pw" {
   type        = string
   description = "The admin mysql password"
   default = "Greaterthan8"
+}
+
+variable "administrator_pw_2" {
+  type        = string
+  description = "The admin mysql password"
+  default = "Greaterthan82"
 }
 
 
